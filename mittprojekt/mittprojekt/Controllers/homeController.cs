@@ -12,7 +12,26 @@ namespace mittprojekt.Controllers
         // GET: /home/
         public ActionResult Index()
         {
-            return View();
+            Random r = new Random();
+            int slumpattal = r.Next(0, 100);
+
+            return View(slumpattal);
         }
+        public ActionResult minsidatextpåallasidor()
+        {
+            Random r = new Random();
+            int slumpattal = r.Next(0, 100);
+
+            return View(slumpattal);
+        }
+        /*
+        public ActionResult minsidatextpåallasidor()  // gör en väder API 
+        {
+            Random r = new Random();
+            int slumpattal = r.Next(0, 100);
+
+            return View(slumpattal);
+        }
+        */
 	}
 }
