@@ -1,13 +1,50 @@
 ﻿@model int
 @{
-    ViewBag.Title = "Min titel";
+    ViewBag.Title = "Väderkollen";   
 }
 
 
-<h2>Index</h2> <!--det här är en vy, den visar allting som händer under ytan-->
+<h2>Väderkollen</h2> <!--det här är en vy, den visar allting som händer under ytan-->
 
-hej här är text
+@Html.ActionLink("Klicka här för att se högsta temperatur i skåne", "AverageTemperature", "Weather")
 
-<div>text i en div</div>
-<div>vårt heltal är : @Model</div> <!--  är en variabel där vad som helst kan visas -->
-<div>vårt heltal är fortfarande: @Model</div> 
+@Html.ActionLink("Klicka här för att se snitttemperatur för skåne","AverageTemperature","Weather") <!--link for average temperature -->
+
+<!--gör så att man kan se vilket stad som haft mest fint väder under en viss tid -->
+<!--mest regn-->  <!---->
+
+<form action="@Url.Action("Index", "Weather")">   <!--input button with dropdown for location-->
+    <select name="city">
+        <option value="Malmo,se">
+            Malmö
+        </option>
+        <option value="Vellinge,se">
+            Vellinge
+        </option>
+        <option value="Trelleborg,se">
+            Trelleborg
+        </option>
+        <option value="Ystad.se">
+            Ystad
+        </option>
+        <option value="Helsingborg,se">
+            Helsingborg
+        </option>
+        <option value="Kristianstad,se">
+            Kristianstad
+        </option>
+        <option value="Landskrona,se">
+            Landskrona
+        </option>
+        <option value="Simrishamn,se">
+            Simrishamn 
+        </option>
+        <option value="Lund,se">
+            Lund
+        </option>
+        <option value="Ängelholm,se">
+            Ängelholm
+        </option>
+    </select>
+    <input type="submit" value="Visa värden för staden" /> 
+</form>

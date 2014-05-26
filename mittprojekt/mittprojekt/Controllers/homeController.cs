@@ -9,29 +9,29 @@ namespace mittprojekt.Controllers
     public class homeController : Controller
     {
         //
-        // GET: /home/
-        public ActionResult Index()
+        // GET: /home/  
+        public ActionResult Index()             //random number controller 
         {
             Random r = new Random();
-            int slumpattal = r.Next(0, 100);
+            int randomnumber = r.Next(0, 100);
 
-            return View(slumpattal);
+            return View(randomnumber);
         }
-        public ActionResult minsidatextpåallasidor()
+        public ActionResult minsidatextpåallasidor() //links action to view 
         {
             Random r = new Random();
-            int slumpattal = r.Next(0, 100);
+            int randomnumber = r.Next(0, 100);
 
-            return View(slumpattal);
+            return View(randomnumber);                 
         }
-        /*
-        public ActionResult minsidatextpåallasidor()  // gör en väder API 
+        
+        public ActionResult slump()  //
         {
             Random r = new Random();
-            int slumpattal = r.Next(0, 100);
+            int randomnumber = r.Next(0, 100);
 
-            return View(slumpattal);
+            return View(randomnumber);
         }
-        */
+        
 	}
 }

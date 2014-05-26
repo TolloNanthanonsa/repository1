@@ -1,8 +1,15 @@
-﻿@model double
+﻿@model mittprojekt.Models.Weather
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Väderdata";
 }
 
 <h2>Index</h2>
+@Html.ActionLink("Gå tillbaka och välj ny stad", "Index", "Home") <!--link back to the first page-->
 
-Temperaturen i vellinge är: @Model 
+
+<p>Temperaturen i vellinge är: @Model.Temperature</p>
+<p>fuktighet @Model.Humidity %</p>
+<p>lufttryck @Model.airpressure hpa</p>
+<p>vindhastighet @Model.windspeed mps</p> 
+
+ 
