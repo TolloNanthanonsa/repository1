@@ -69,17 +69,6 @@ namespace mittprojekt.Controllers
 
             return View(averageTemp);            
         }
-        public ActionResult HighestTemp()   //highest temperature 
-        {
-            List<string> cities = new List<string>() { "Vellinge,se ", "Malmo,se", "Trelleborg,se", "Ystad,se", "Helsingborg,se", "Kristianstad.se", 
-                "Landskrona,se", "Simrishamn,se", "Lund,se", "Ängelholm,se"};//list of cities to be sorted for highest temp  
-
-
-            double HighestTemp = 0; 
-
-           
-
-            return View();
-        }
+        
 	}
 }
